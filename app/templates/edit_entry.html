@@ -1,0 +1,11 @@
+<head>
+    <h3>Edit Entry</h3>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="update">
+    </form>
+    <button onclick="location.href='{% url 'home_url' %}'">Cancel</button>
+</body>

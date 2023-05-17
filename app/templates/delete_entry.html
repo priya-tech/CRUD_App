@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <h3>Delete Entry</h3>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <p>Are you sure to delete entry for <b>{{ object.name }}</b></p>
+            <input type="submit" value="Confirm">
+        </form>
+        <button onclick="location.href='{% url 'home_url' %}'">Cancel</button>
+    </body>
+</html>

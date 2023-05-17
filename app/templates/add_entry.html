@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <h2>Add Entry</h2>
+    </head>
+    <body>
+        <form method="POST" action = "{% url 'add_entry' %}" name="EntryData">
+           {% csrf_token %}
+           <label>Name: </label>
+           <input type="text" name="name" required><br><br>
+           <label>Text: </label>
+           <input type="text" name="text" required><br><br>
+           <label>Email: </label>
+           <input type="email" name="email" required><br><br>
+           <label>Gender: </label><br>
+           <input type="radio" name="gender" value="M">
+           <label for="Male">Male</label><br>
+           <input type="radio" name="gender" value="F">
+           <label for="Female">Female</label><br><br>
+           <label>Age:</label>
+           <input type="number" name="age" required><br><br>
+           <label>Date of Birth:</label>
+           <input type="date" name="date_of_birth" required><br><br>
+           <input type="submit" value="Add Entry">
+        </form>
+    </body>
+</html>
